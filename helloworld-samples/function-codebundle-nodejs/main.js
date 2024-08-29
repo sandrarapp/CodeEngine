@@ -37,7 +37,7 @@ function main(args) {
   // create a default text generator. 
   const lorem = new LoremIpsum();
   setTimeout(() => {
-     console.log("Delayed for 1 second.");
+     console.log("Delayed for 130 sec.");
   }, 130000);
 
   // finally, build an HTML response that can be rendered 
