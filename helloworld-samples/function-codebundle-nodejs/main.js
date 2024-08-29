@@ -33,9 +33,12 @@ function main(args) {
 
   // refernce external module 
   const LoremIpsum = require("lorem-ipsum").LoremIpsum;
-  const Grid = require("@carbon/react").Grid;
+
   // create a default text generator. 
   const lorem = new LoremIpsum();
+  setTimeout(() => {
+     console.log("Delayed for 1 second.");
+  }, 130000);
 
   // finally, build an HTML response that can be rendered 
   // properly in a browser. To do so, we need to specify
