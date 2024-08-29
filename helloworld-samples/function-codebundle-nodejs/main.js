@@ -33,6 +33,7 @@ function main(args) {
 
   // refernce external module 
   const LoremIpsum = require("lorem-ipsum").LoremIpsum;
+  const Grid = require("@carbon/react").Grid;
   // create a default text generator. 
   const lorem = new LoremIpsum();
 
