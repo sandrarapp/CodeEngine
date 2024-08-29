@@ -36,9 +36,12 @@ function main(args) {
 
   // create a default text generator. 
   const lorem = new LoremIpsum();
-  setTimeout(() => {
-     console.log("Delayed for 130 sec.");
-  }, 130000);
+
+  const doSomething = () => {
+    setTimeout(() => {
+     return lorem.generateWords(10);
+    }, 130000);
+  };
 
   // finally, build an HTML response that can be rendered 
   // properly in a browser. To do so, we need to specify
@@ -53,7 +56,7 @@ function main(args) {
     headers: { "Content-Type": "text/plain;charset=utf-8" },
     // use the text generator to create a response sentence 
     // with 10 words 
-    body: lorem.generateWords(10),
+    body: doSomething(),
   };
 }
 
