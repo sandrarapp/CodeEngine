@@ -49,15 +49,17 @@ function main(args) {
   // Alternatively, we could also use 'text/plain' or 
   // 'application/json', depending on the text we plan to 
   // return.
-  return {
-    // specify headers for the HTTP response
-    // we only set the Content-Type in this case, to 
-    // ensure the text is properly displayed in the browser
-    headers: { "Content-Type": "text/plain;charset=utf-8" },
-    // use the text generator to create a response sentence 
-    // with 10 words 
-    body: doSomething(),
-  };
+  setTimeout(() => {
+    return {
+      // specify headers for the HTTP response
+      // we only set the Content-Type in this case, to 
+      // ensure the text is properly displayed in the browser
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      // use the text generator to create a response sentence 
+      // with 10 words 
+      body: lorem.generateWords(10),
+    };
+  }, 70000);
 }
 
 // export the main function within this source file 
