@@ -16,9 +16,15 @@ module.exports.main = main = async (args) => {
             method: 'GET'
         }
     }
+    const doSomething = async () => {
+        setTimeout(() => {
+         console.log('Done');
+        }, 130000);
+  };
 
     const response = await fetch(url, requestData);
-    const data = await response.json();
+    // const data = await response.json();
+    const data = await doSomething();
 
     return {
         headers: {
