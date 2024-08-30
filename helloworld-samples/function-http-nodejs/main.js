@@ -18,16 +18,7 @@ module.exports.main = main = async (args) => {
     }
 
     const response = await fetch(url, requestData);
-    const doSomething = () => {
-        const data = await response.json();
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-               resolve(data);
-             }, 100000);
-        });
-    };
-    // const data = await response.json();
-    const data = await doSomething();
+    const data = await response.json();
 
     return {
         headers: {
