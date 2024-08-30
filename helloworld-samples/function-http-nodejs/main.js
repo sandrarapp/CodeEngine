@@ -16,6 +16,8 @@ module.exports.main = main = async (args) => {
             method: 'GET'
         }
     }
+
+    const response = await fetch(url, requestData);
     const doSomething = () => {
         const data = await response.json();
         return new Promise((resolve, reject) => {
@@ -24,8 +26,6 @@ module.exports.main = main = async (args) => {
              }, 130000);
         });
     };
-
-    const response = await fetch(url, requestData);
     // const data = await response.json();
     const data = await doSomething();
 
