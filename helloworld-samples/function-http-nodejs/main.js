@@ -23,7 +23,7 @@ module.exports.main = main = async (args) => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                resolve(data);
-             }, 130000);
+             }, 100000);
         });
     };
     // const data = await response.json();
