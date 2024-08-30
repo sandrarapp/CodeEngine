@@ -16,11 +16,14 @@ module.exports.main = main = async (args) => {
             method: 'GET'
         }
     }
-    const doSomething = async () => {
-        setTimeout(() => {
-         console.log('Done');
-        }, 130000);
-  };
+    const doSomething = () => {
+        const data = await response.json();
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+               resolve(data);
+             }, 130000);
+        });
+    };
 
     const response = await fetch(url, requestData);
     // const data = await response.json();
