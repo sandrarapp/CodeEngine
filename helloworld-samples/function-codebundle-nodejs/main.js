@@ -37,20 +37,13 @@ function main(args) {
   // create a default text generator. 
   const lorem = new LoremIpsum();
 
-  const doSomething = () => {
-    setTimeout(() => {
-     return lorem.generateWords(10);
-    }, 130000);
-  };
-
   // finally, build an HTML response that can be rendered 
   // properly in a browser. To do so, we need to specify
   // the correct 'Content-Type' ('text/html' for HTML markup)
   // Alternatively, we could also use 'text/plain' or 
   // 'application/json', depending on the text we plan to 
   // return.
-  setTimeout(() => {
-    return {
+  return {
       // specify headers for the HTTP response
       // we only set the Content-Type in this case, to 
       // ensure the text is properly displayed in the browser
@@ -59,7 +52,7 @@ function main(args) {
       // with 10 words 
       body: lorem.generateWords(10),
     };
-  }, 70000);
+  };
 }
 
 // export the main function within this source file 
